@@ -10,11 +10,8 @@ app.use(morgan('dev'))
 app.use(express.json()) //puts together json sent to server
 app.use(express.urlencoded({extended: true})) //gets variables off url query strings
 
-//creating your own middleware augment
-app.use((req, res, next) => {
-    req.thiem_secret = 'foodz'
-    next()
-})
+
+
 
 
 
