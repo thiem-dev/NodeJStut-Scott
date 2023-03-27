@@ -18,6 +18,8 @@ Repo: https://github.com/Hendrixer/api-design-v4-course
 
 •Thunder Client: VS Code extension for HTTP requests
 
+•Morgan : MiddleWare that logs requests
+
 ## Misc Notes
 
 
