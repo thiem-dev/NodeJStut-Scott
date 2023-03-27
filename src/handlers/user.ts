@@ -30,4 +30,7 @@ export const signin = async (req, res) => {
         res.json({message: 'incorrect password'})
         return
     }
+
+    const token = createJWT(user)
+    res.json({ token })
 }
