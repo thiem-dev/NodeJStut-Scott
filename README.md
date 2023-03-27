@@ -1,5 +1,4 @@
-# NodeJStut-Scott
-NodeJS tutorial from FrontEndMasters
+# API Design in NodeJS FrontEndMasters
 
 
 ## This tutorial follows: 
