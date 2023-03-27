@@ -11,7 +11,7 @@ Class Docs: https://hendrixer.github.io/API-design-v4/
 Repo: https://github.com/Hendrixer/api-design-v4-course
 
 
-### Other Tech used: 
+## Other Tech used: 
 
 •Prisma: ORM for DBs - makes SQL schema code from easier to type prisma schema code
 
@@ -19,7 +19,7 @@ Repo: https://github.com/Hendrixer/api-design-v4-course
 
 •Thunder Client: VS Code extension for HTTP requests
 
-### Misc Notes
+## Misc Notes
 
 
 Note: Might break if free postgresDB expires on https://dashboard.render.com/ . Create a new one and then update the .env file to new DB
