@@ -25,7 +25,7 @@ model Product {
   name        String   @db.VarChar(255)
   belongsToId String
   belongsTo   User     @relation(fields: [belongsToId], references: [id])
-  updates      Update[]
+  updates     Update[]
 }
 
 enum UPDATE_STATUS {
@@ -44,15 +44,19 @@ model Update {
   version   String?
   asset     String?
 
-  productId String
-  product   Product @relation(fields: [productId], references: [id])
+  productId   String
+  product     Product       @relation(fields: [productId], references: [id])
+  UpdatePoints UpdatePoint[]
 }
 
 model UpdatePoint {
-  id String @id @default(uuid())
+  id        String   @id @default(uuid())
   createdAt DateTime @default(now())
-  updatedAt DateTime 
+  updatedAt DateTime
 
-  name String @db.VarChar(255)
+  name        String @db.VarChar(255)
   description String
+
+  updateId String
+  update   Update @relation(fields: [updateId], references: [id])
 }
