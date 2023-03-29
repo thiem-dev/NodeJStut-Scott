@@ -2,6 +2,7 @@ import express from 'express'
 import router from './router'
 import morgan from 'morgan'
 import { protect } from './modules/auth'
+import { createNewUser, signin } from './handlers/user'
 
 const express = require('express');
 
@@ -24,5 +25,9 @@ app.get('/', (req, res) => {
 
 //protect is authorization middle ware using JWT secrets/sign
 app.use('/api', protect, router)
+
+app.use('/user', createNewUser)
+app.use('/signin', signin)
+
 
 export default app;
