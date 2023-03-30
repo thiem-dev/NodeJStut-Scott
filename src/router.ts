@@ -32,10 +32,10 @@ router.put('/update/:id',
     () => {}
 )
 
-
 router.post('/update', 
     body('title').exists().isString(), 
     body('body').exists().isString(), 
+    body('productId').
     () => {}
     )
 router.delete('/update/:id', () => {})
