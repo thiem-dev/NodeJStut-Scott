@@ -27,7 +27,7 @@ router.get('/update/:id', () => {})
 router.put('/update/:id', 
     body('title').optional(), 
     body('body').optional(), 
-    body('status').isIn(['IN_PROGRESS', 'SHIPPED', 'DEPRECATED']),
+    body('status').isIn(['IN_PROGRESS', 'SHIPPED', 'DEPRECATED']).optional(),
     body('version').optional(),
     () => {}
 )
@@ -35,7 +35,7 @@ router.put('/update/:id',
 router.post('/update', 
     body('title').exists().isString(), 
     body('body').exists().isString(), 
-    body('productId').
+    body('productId').exists().isString(),
     () => {}
     )
 router.delete('/update/:id', () => {})
