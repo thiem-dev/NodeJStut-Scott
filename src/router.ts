@@ -60,4 +60,10 @@ router.post('/updatepoint',
 )
 router.delete('/updatepoint/:id', () => {})
 
+// use to catch sub router errors that don't bubble up to server.ts like char limit 255 exceeded
+router.use((err,req,res,next) => {
+    console.log(err)
+    res.json({message: 'in router handler test'})
+})
+
 export default router
