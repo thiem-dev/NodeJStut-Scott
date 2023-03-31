@@ -21,6 +21,8 @@ Repo: https://github.com/Hendrixer/api-design-v4-course
 
 •Morgan : MiddleWare that logs requests. Helps debug requests and sever errors
 
+•Jest and SuperTest : Javascript testing (unit and integration)
+
 ## Misc Notes
 
 
