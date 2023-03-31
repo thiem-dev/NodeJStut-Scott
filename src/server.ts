@@ -18,9 +18,7 @@ app.use(express.urlencoded({extended: true})) //gets variables off url query str
 
 
 app.get('/', (req, res, next) => {
-    setTimeout(() => {
-        next(new Error('hello'))
-    }, 1)
+    res.json({message: 'hello'})
 })
 
 //protect is authorization middle ware using JWT secrets/sign
